@@ -22,6 +22,6 @@ Device* PluginLoader::load(const QString& path)
         return device;
     }
 
-    qWarning() << "Plugin " << path << "failed to load...";
+    qWarning() << "Plugin " << path << "failed to load..." << m_pluginLoader->errorString();
     return nullptr;
 }
